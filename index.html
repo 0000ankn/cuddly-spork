@@ -1,31 +1,90 @@
-<!-- …기존 코드 생략… -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EarTimer 지원 페이지</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #0066cc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    section { margin-bottom: 2rem; }
+    h2 { margin-top: 0; color: #0066cc; }
+    ul { padding-left: 1.2rem; }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 1rem;
+    }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .support-email {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EarTimer 지원 페이지</h1>
+  </header>
+
+  <main>
+    <!-- 앱 소개 -->
+    <section>
+      <h2>앱 소개</h2>
+      <p>
+        EarTimer는 이어폰 연결을 감지하여 타이머 종료 시 반복 알람을 재생해 주는 스마트 타이머 앱입니다.<br>
+        • 백그라운드 재생 및 무음 모드 무시 지원<br>
+        • 다양한 벨소리 파일 제공<br>
+        • 스누즈 기능<br>
+        • 다크/라이트 모드 전환<br>
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <ul>
+        <li><strong>Q1. 이어폰이 연결되어 있지 않아도 알람이 울리나요?</strong><br>
+            A. 네, 백그라운드에서도 기기 스피커로 알람이 재생됩니다.</li>
+        <li><strong>Q2. 무음 모드인데도 소리가 나오나요?</strong><br>
+            A. AVAudioSession.playback 카테고리로 설정하여 무음 모드를 무시합니다.</li>
+        <li><strong>Q3. 앱이 실행 중이지 않아도 알림이 울리나요?</strong><br>
+            A. 네, 로컬 알림과 AVAudioPlayer를 사용해 타이머 종료 시 알람이 재생됩니다.</li>
+      </ul>
+    </section>
+
+    <!-- 지원 이메일만 표시 -->
+    <div class="support-email">
+      <p>문의 사항이 있으시면 아래 이메일로 연락주세요.</p>
+      <p><a href="mailto:ankn0101@gmail.com">your-support-email@example.com</a></p>
+    </div>
+  </main>
 
   <footer>
-    &copy; 2025 EarTimer Team<br>
-    <a href="https://www.freeprivacypolicy.com/live/c2790f53-bcff-438a-9aa9-7e3af80ca184">개인정보 처리방침</a> |
+    &copy; 2025 EarTimer Team&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://www.freeprivacypolicy.com/live/c2790f53-bcff-438a-9aa9-7e3af80ca184">개인정보 처리방침</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    
   </footer>
-
-  <!-- 댓글 섹션 추가 -->
-  <section style="max-width:600px; margin:2rem auto; text-align:center;">
-    <h2>문의 및 댓글</h2>
-    <p>
-      EarTimer 사용 중 궁금한 점이나 건의사항이 있으시면<br>
-      아래 버튼을 눌러 댓글(이슈)로 남겨주세요.
-    </p>
-    <a
-      href="https://github.com/0000ankn/cuddly-spork/issues"
-      target="_blank"
-      style="
-        display:inline-block;
-        padding:0.6rem 1.2rem;
-        background:#0066cc;
-        color:#fff;
-        border-radius:4px;
-        text-decoration:none;
-      "
-    >
-      댓글 남기러 가기
-    </a>
-  </section>
 </body>
 </html>
